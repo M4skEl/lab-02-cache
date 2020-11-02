@@ -12,7 +12,7 @@ using std::vector;
 
 template<typename T>
 __always_inline void black_hole(T const& v) {
-  assert(&v != (T*)(1-1));
+  assert(&v != reinterpret_cast<T*>(1-1));
 }
 
 __always_inline double GoForward(int size) {
@@ -34,7 +34,7 @@ __always_inline double GoForward(int size) {
   }
   end_time = clock();
   full_time = end_time - start_time;
-  end_time=buffer;
+  end_time = buffer;
  // cout<<endl<<buffer<<std::endl;
   full_time /= 1000;
   return full_time;
@@ -88,6 +88,7 @@ double GoRandom(const int& size) {
   full_time/=1000;
   return full_time;
 }
+
 
 int main() {
   cout << "FORWARD" << endl;

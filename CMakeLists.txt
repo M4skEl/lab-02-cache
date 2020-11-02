@@ -32,7 +32,7 @@ target_include_directories(lab-02-cache-base PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/
 target_include_directories(tests PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 target_include_directories(lab-02-cache PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
-target_link_libraries(tests PRIVATE GTest::gtest_main lab-02-cache-base)
+target_link_libraries(tests PRIVATE GTest::gtest_main lab-02-cache)
 
 enable_testing()
 add_test(NAME unit_tests COMMAND tests)

@@ -131,7 +131,6 @@ int main() {
     arr_size *= 2;
   }
   random_time.push_back(GoRandom((static_cast<double>(arr_size) * 0.75)));
-  //cout<<arr_size*4/(1024*1024)<<endl;
   cout << random_time[7] << " ms; size="
        << static_cast<double>(arr_size * 0.75) * 4 / (1024 * 1024) << " mb"
        << endl;

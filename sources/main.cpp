@@ -136,5 +136,4 @@ int main() {
        << static_cast<double>(arr_size * 0.75) * 4 / (1024 * 1024) << " mb"
        << endl;
   return 0;
-
 }
